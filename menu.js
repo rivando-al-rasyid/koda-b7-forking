@@ -51,7 +51,7 @@ async function menu() {
                     break;
                 case "5":
                     const inputHarga = await rl.question("Masukkan harga: ");
-                    const inputDiskon = await rl.question("Masukkan diskon: ");
+                    const inputDiskon = await rl.question("Masukkan diskonnya: ");
                     const hargaAkhir = Number(inputHarga);
                     const diskonAngka = Number(inputDiskon);
                     const hasilHarga = hitungDiskon(hargaAkhir, diskonAngka);
