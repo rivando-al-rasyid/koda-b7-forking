@@ -1,6 +1,7 @@
 import { createInterface } from "node:readline/promises";
 
 import sayHelloWorld from "./features/1_greeting.js";
+import { inputUser } from "./features/2_inputUser.js";
 import luasSilinder from "./features/4_luasSilinder.js";
 import { main } from "./features/8_calculator.js";
 import isGenap from "./features/7_isGenap.js";
@@ -21,6 +22,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("2. Input Nama dan Umur")
         console.log("4. Hitung Luas Silinder")
         console.log("6. Konversi Celcius-Kelvin")
         console.log("7. Cek Ganjil Genap")
@@ -40,6 +42,9 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "2":
+                    await inputUser(rl)
                     break;
                 case "4":
                     const jariJari = await rl.question("Masukkan jari jari : ")
